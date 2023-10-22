@@ -15,7 +15,7 @@ function createGalleryItemsMarkup(items){
 return items.map(({ preview, description, original }) => {
     return `<li class="gallery__item">
     <a  class="gallery__link" href=${original}>
-      <img  class="gallery__image" src=${preview} alt=${description} data-source=${original}/>
+      <img class="gallery__image" src=${preview} alt=${description} data-source=${original} />
     </a>
     </li>`;
   }).join(' ');
@@ -37,6 +37,8 @@ const instance = basicLightbox.create(
 );
 
 function handlerClick(e) {
+  let currentImg=instance.element().querySelector('img')
+  // console.log(currentImg)
   e.preventDefault();
   const datasetSource = e.target.dataset.source;
   if (!datasetSource) return;
