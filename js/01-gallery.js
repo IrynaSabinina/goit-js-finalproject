@@ -41,6 +41,7 @@ function handlerClick(e) {
   const datasetSource = e.target.dataset.source;
   if (!datasetSource) return;
   instance.element().querySelector('img').src = datasetSource;
+  // console.log(datasetSource)
   instance.show();
 }
 

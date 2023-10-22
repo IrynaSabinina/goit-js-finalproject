@@ -17,7 +17,7 @@ const markup = galleryItems.reduce(
   </li>`),
     ''
   );
-  
+ 
   galleryRef.insertAdjacentHTML('afterbegin', markup);
   
   const lightbox = new SimpleLightbox('.gallery a', {
